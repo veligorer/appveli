@@ -1,8 +1,8 @@
 <?php 
-$servername = "projedbinstance.cqub0g199gzf.eu-west-1.rds.amazonaws.com";
-$username = "projemaster";
-$password = "master1234";
-$dbname = "proje";
+$servername = getenv('DBSERVER');
+$username = getenv('USERNAME');
+$password = getenv('PASSWORD');
+$dbname = getenv('DBNAME');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
